@@ -1,0 +1,7 @@
+<h1>List of Tags</h1>
+
+	<% @tags.each do |tag| %>
+		<p class="tag_list"><%= link_to  tag.name.capitalize, tag_path(tag) %></li>
+		<%= link_to "Delete", tag_path(tag), method: :delete, data: { confirm: "Do you really need to delete this Tag?" } %></p>
+	<% end%>
+
