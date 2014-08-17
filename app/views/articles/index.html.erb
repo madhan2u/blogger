@@ -7,6 +7,9 @@
 		</li>
 	<% end%>
 </ul>	
+<% if logged_in? %>
 <p class="article_actions">
 <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+<%= link_to "New Author", new_author_path, class: "new_article", style: "margin-right: 150px"    %>
 </p>
+<% end %>
